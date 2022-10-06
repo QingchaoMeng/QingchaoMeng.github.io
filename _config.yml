@@ -21,7 +21,7 @@
 title: Technology Dummy 
 email: techdummy@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-	This site is my homepage blog of techs.
+  This site is my homepage blog of techs.
 
 domain: QingchaoMeng.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
