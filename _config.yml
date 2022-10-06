@@ -1,2 +1,4 @@
-theme: bluma-clean-theme
+# theme: bluma-clean-theme
+# With GitHub Pages Gem
+remote_theme: chrisrhymes/bulma-clean-theme
 
