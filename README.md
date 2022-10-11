@@ -1,2 +1,1 @@
-# QingchaoMeng.github.io
-Hello, welcome to Qingchao's homepage at GitHub!
+Hello, welcome to my homepage at GitHub!
