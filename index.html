@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home - Qingchao Meng | From HFT to AI
 ---
 
 <div class="home">
@@ -19,11 +20,12 @@ layout: default
     <h2>About Me</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>I'm a professional with expertise in High-Frequency Trading and Artificial Intelligence. My journey has taken me from developing sophisticated trading algorithms to exploring the frontiers of AI.</p>
-        <p>This site showcases my research, projects, and thoughts on technology and finance.</p>
+        <p>Welcome to my portfolio! I'm a professional with expertise in High-Frequency Trading and Artificial Intelligence. My journey has taken me from developing sophisticated trading algorithms to exploring the frontiers of AI.</p>
+        <p>With years of experience in the financial technology sector, I've developed a unique perspective on how these technologies can be combined to create powerful solutions.</p>
+        <p>I'm passionate about building systems that operate at the intersection of cutting-edge technology and practical applications, always striving to push the boundaries of what's possible.</p>
       </div>
       <div class="skills">
-        <h3>Skills</h3>
+        <h3>Skills & Expertise</h3>
         <div class="skill-bars">
           <div class="skill">
             <span>High-Frequency Trading</span>
@@ -41,6 +43,14 @@ layout: default
             <span>C++</span>
             <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
           </div>
+          <div class="skill">
+            <span>Algorithmic Trading</span>
+            <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+          </div>
+          <div class="skill">
+            <span>Deep Learning</span>
+            <div class="progress-bar"><div class="progress" style="width: 87%"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -49,28 +59,52 @@ layout: default
   <section id="projects" class="projects">
     <h2>Featured Projects</h2>
     <div class="project-grid">
-      {% for project in site.projects limit:3 %}
+      <!-- Project 1 -->
       <div class="project-card">
         <div class="project-image">
-          <img src="{{ project.image | default: '/assets/images/project-placeholder.jpg' }}" alt="{{ project.title }}">
+          <img src="/assets/images/project-placeholder.jpg" alt="Algorithmic Trading System">
         </div>
         <div class="project-info">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.excerpt }}</p>
-          <a href="{{ project.url }}" class="read-more">Read More</a>
+          <h3>Algorithmic Trading System</h3>
+          <p>Developed a high-performance trading system capable of executing thousands of trades per second with minimal latency.</p>
+          <a href="#" class="read-more">Read More</a>
         </div>
       </div>
-      {% endfor %}
+      
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/images/project-placeholder.jpg" alt="Market Data Analysis Platform">
+        </div>
+        <div class="project-info">
+          <h3>Market Data Analysis Platform</h3>
+          <p>Created a comprehensive platform for analyzing market data using advanced statistical methods and machine learning.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="/assets/images/project-placeholder.jpg" alt="AI-Powered Trading Strategy">
+        </div>
+        <div class="project-info">
+          <h3>AI-Powered Trading Strategy</h3>
+          <p>Implemented a deep learning-based trading strategy that adapts to changing market conditions in real-time.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
     </div>
     <div class="view-all">
-      <a href="/projects" class="btn btn-outline">View All Projects</a>
+      <a href="#" class="btn btn-outline">View All Projects</a>
     </div>
   </section>
 
   <section id="research" class="research">
     <h2>Research</h2>
     <div class="research-content">
-      <p>Explore my latest research in the fields of high-frequency trading and artificial intelligence.</p>
+      <p>My research focuses on the application of artificial intelligence to financial markets, particularly in developing more efficient and adaptive trading algorithms.</p>
+      <p>I'm especially interested in how deep learning can be used to identify patterns in market data that traditional statistical methods might miss.</p>
       <a href="/Research" class="btn btn-primary">View Research</a>
     </div>
   </section>
@@ -117,3 +151,24 @@ layout: default
     </div>
   </section>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70, // Account for header height
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
