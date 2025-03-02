@@ -31,10 +31,13 @@ linkedin_username: qingchaomeng
 # twitter_username: your_twitter_username
 
 # Build settings
-remote_theme: jekyll/minima
+# Use the default theme for GitHub Pages
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
+  - jekyll-seo-tag
+  # Don't use remote theme for now
+  # - jekyll-remote-theme
 
 # Theme settings
 sass:

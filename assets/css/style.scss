@@ -1,0 +1,23 @@
+// Import variables first
+@import "../_sass/variables";
+
+// Import theme
+@import "{{ site.theme }}";
+
+// Import custom styles
+@import "../_sass/custom";
+
+// Define variables needed by GitHub Pages default theme
+$grey-color: #64748b !default;
+$grey-color-light: #e2e8f0 !default;
+$grey-color-dark: #334155 !default;
+$text-color: #1e293b !default;
+$background-color: #f8fafc !default;
+$brand-color: #2563eb !default;
+$content-width: 1200px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+$spacing-unit: 30px !default;
+$table-text-align: left !default;
+
+@import "minima"; 
