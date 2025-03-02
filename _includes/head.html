@@ -30,10 +30,18 @@
       --br: 10px;
     }
     
+    html, body {
+      height: auto !important;
+      min-height: 100% !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+    }
+    
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
       color: var(--dark) !important;
       background-color: var(--light) !important;
+      position: relative !important;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -56,6 +64,8 @@
     
     .page-content {
       padding-top: 5rem !important;
+      position: relative !important;
+      z-index: 1 !important;
     }
     
     .site-title, .site-title:visited {
@@ -63,16 +73,34 @@
     }
     
     .hero {
-      height: 100vh !important;
+      min-height: 80vh !important;
+      height: auto !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       text-align: center !important;
       color: white !important;
       margin-top: -5rem !important;
+      position: relative !important;
+      padding: 8rem 0 4rem !important;
+    }
+    
+    .hero::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/QLkYrBqziCfuzxbh-generated_image.jpg') !important;
       background-size: cover !important;
       background-position: center !important;
+      z-index: -1 !important;
+    }
+    
+    section {
+      position: relative !important;
+      z-index: 1 !important;
     }
   </style>
   

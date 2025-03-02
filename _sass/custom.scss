@@ -25,6 +25,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -38,6 +43,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
 }
 
 /* Typography */
@@ -124,27 +131,43 @@ a {
 /* Make room for fixed header */
 .page-content {
   padding-top: 5rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Hero section */
 .hero {
-  height: 100vh;
+  min-height: 80vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/QLkYrBqziCfuzxbh-generated_image.jpg');
-  background-size: cover;
-  background-position: center;
   color: #fff;
   position: relative;
   margin-top: -5rem; /* Compensate for fixed header */
+  padding: 8rem 0 4rem;
+  z-index: 1;
+}
+
+/* Use a pseudo-element for the background to avoid overflow issues */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/QLkYrBqziCfuzxbh-generated_image.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .hero-content {
   max-width: 900px;
   padding: 2rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -236,6 +259,9 @@ a {
 /* Section styles */
 section {
   padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+  background-color: var(--light); /* Add explicit background color to each section */
 }
 
 section h2 {
@@ -320,6 +346,14 @@ section h2 {
   flex-grow: 1;
 }
 
+/* Footer styling */
+.site-footer {
+  background-color: var(--dark);
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  z-index: 1;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 992px) {
   section {
@@ -337,7 +371,7 @@ section h2 {
   }
   
   .hero {
-    height: 90vh;
+    min-height: 70vh;
   }
   
   .project-grid {
