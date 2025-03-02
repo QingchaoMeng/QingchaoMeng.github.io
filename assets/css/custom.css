@@ -29,6 +29,13 @@
   padding: 0;
 }
 
+html, body {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -41,7 +48,7 @@ body {
   background-color: var(--light) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  position: relative !important;
 }
 
 /* Typography */
@@ -132,17 +139,31 @@ a:hover {
 
 /* Hero section */
 .hero {
-  height: 100vh !important;
+  min-height: 80vh !important;
+  height: auto !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
+  color: white !important;
+  position: relative !important;
+  margin-top: -5rem !important; /* Compensate for fixed header */
+  padding: 8rem 0 4rem !important;
+  z-index: 1 !important;
+}
+
+/* Use a pseudo-element for the background to avoid overflow issues */
+.hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/QLkYrBqziCfuzxbh-generated_image.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
-  color: #fff !important;
-  position: relative !important;
-  margin-top: -5rem !important; /* Compensate for fixed header */
+  z-index: -1 !important;
 }
 
 .hero-content {
@@ -243,6 +264,9 @@ a:hover {
 /* Section styles */
 section {
   padding: 6rem 2rem !important;
+  position: relative !important;
+  z-index: 1 !important;
+  background-color: var(--light) !important; /* Add explicit background color to each section */
 }
 
 section h2 {
@@ -352,7 +376,8 @@ section h2:after {
   }
   
   .hero {
-    height: 90vh !important;
+    min-height: 80vh !important;
+    height: auto !important;
   }
   
   .project-grid {

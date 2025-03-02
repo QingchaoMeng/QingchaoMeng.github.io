@@ -30,11 +30,17 @@
       --br: 10px;
     }
     
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+    
     html, body {
-      height: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
       min-height: 100% !important;
+      height: auto !important;
       overflow-x: hidden !important;
-      overflow-y: auto !important;
+      overflow-y: scroll !important;
     }
     
     body {
@@ -42,6 +48,8 @@
       color: var(--dark) !important;
       background-color: var(--light) !important;
       position: relative !important;
+      display: flex !important;
+      flex-direction: column !important;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -66,6 +74,7 @@
       padding-top: 5rem !important;
       position: relative !important;
       z-index: 1 !important;
+      flex: 1 0 auto !important;
     }
     
     .site-title, .site-title:visited {
@@ -101,6 +110,7 @@
     section {
       position: relative !important;
       z-index: 1 !important;
+      background-color: var(--light) !important;
     }
   </style>
   

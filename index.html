@@ -163,9 +163,21 @@ layout: default
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        
+        // Get the target element
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        // Only scroll if target exists
+        if (target) {
+          const headerOffset = 80; // Adjust based on your header height
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - headerOffset;
+          
+          window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
     });
     
@@ -178,19 +190,22 @@ layout: default
         const isVisible = (rect.top <= window.innerHeight * 0.8);
         
         if (isVisible) {
-          bar.style.width = bar.style.width;
+          bar.style.width = bar.getAttribute('data-width') || bar.style.width;
         } else {
           bar.style.width = '0';
         }
       });
     };
     
-    // Initialize skill bars
+    // Initialize skill bars - store original width
     skillBars.forEach(bar => {
+      // Store the original width as a data attribute
+      bar.setAttribute('data-width', bar.style.width);
       bar.style.width = '0';
     });
     
-    window.addEventListener('scroll', animateSkillBars);
+    // Use passive: true for better scroll performance
+    window.addEventListener('scroll', animateSkillBars, { passive: true });
     
     // Trigger initial animation
     setTimeout(animateSkillBars, 500);
