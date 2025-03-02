@@ -32,10 +32,11 @@ linkedin_username: qingchaomeng
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # Add these lines to ensure custom CSS is processed correctly
 sass:

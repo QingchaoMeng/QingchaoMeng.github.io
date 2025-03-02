@@ -3,10 +3,85 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
+  <!-- Fonts first for better performance -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Theme CSS -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  
+  <!-- Critical CSS inlined for immediate loading -->
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #4f46e5;
+      --accent: #f59e0b;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --gray-light: #e2e8f0;
+      --gray-dark: #334155;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 20px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.05);
+      --br: 10px;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+      line-height: 1.7;
+      color: var(--dark);
+      background-color: var(--light);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif !important;
+      font-weight: 600;
+    }
+    
+    .site-header {
+      border-top: 0 !important;
+      border-bottom: 1px solid var(--gray-light) !important;
+      background-color: #fff !important;
+      position: fixed !important;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .site-title, .site-title:visited {
+      font-family: 'Playfair Display', serif !important;
+      font-weight: 700 !important;
+      color: var(--primary) !important;
+    }
+    
+    .page-content {
+      padding-top: 5rem !important;
+    }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/QLkYrBqziCfuzxbh-generated_image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+      margin-top: -5rem;
+    }
+  </style>
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
