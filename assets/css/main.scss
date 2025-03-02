@@ -1,4 +1,21 @@
+// Define Minima theme variables first
+$base-font-family: 'Roboto', sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.6 !default;
 
+$spacing-unit:     30px !default;
+
+$text-color:       #333 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Import Minima theme
 @import 
   "minima",
   "minima/base",
@@ -6,18 +23,13 @@
   "minima/syntax-highlighting"
 ;
 
-body {
-  margin: 0; /* Dummy rule, can be anything */
-}
-
-
-// Custom variables
+// Your custom variables
 $primary-color: #2a7ae2;
 $secondary-color: #1a5186;
 $accent-color: #f8a100;
-$text-color: #333;
 $light-bg: #f9f9f9;
 $dark-bg: #2c3e50;
+
 
 // Global styles
 body {
