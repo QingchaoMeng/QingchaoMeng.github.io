@@ -22,14 +22,49 @@ title: The Art of HFT to AI
 email: noeveah@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site is my homepage blog of techs.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://qingchaomeng.github.io" # the base hostname & protocol for your site
+twitter_username: # your Twitter username (optional)
+github_username: QingchaoMeng
+linkedin_username: # your LinkedIn username (optional)
 
-
-markdown: kramdown
+# Add Google Analytics if you have it
+# google_analytics: UA-XXXXXXXXX-X
 
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Default front matter settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

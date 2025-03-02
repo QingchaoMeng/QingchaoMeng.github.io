@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="animated fadeIn">Qingchao Meng</h1>
+      <h2 class="animated fadeIn delay-1s">From High-Frequency Trading to AI</h2>
+      <p class="animated fadeIn delay-2s">Exploring the intersection of finance, technology, and artificial intelligence</p>
+      <div class="cta-buttons animated fadeIn delay-3s">
+        <a href="#about" class="btn btn-primary">Learn More</a>
+        <a href="#projects" class="btn btn-secondary">View Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a professional with expertise in High-Frequency Trading and Artificial Intelligence. My journey has taken me from developing sophisticated trading algorithms to exploring the frontiers of AI.</p>
+        <p>This site showcases my research, projects, and thoughts on technology and finance.</p>
+      </div>
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill-bars">
+          <div class="skill">
+            <span>High-Frequency Trading</span>
+            <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+          </div>
+          <div class="skill">
+            <span>Machine Learning</span>
+            <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+          </div>
+          <div class="skill">
+            <span>Python</span>
+            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+          </div>
+          <div class="skill">
+            <span>C++</span>
+            <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      {% for project in site.projects limit:3 %}
+      <div class="project-card">
+        <div class="project-image">
+          <img src="{{ project.image | default: '/assets/images/project-placeholder.jpg' }}" alt="{{ project.title }}">
+        </div>
+        <div class="project-info">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.excerpt }}</p>
+          <a href="{{ project.url }}" class="read-more">Read More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="/projects" class="btn btn-outline">View All Projects</a>
+    </div>
+  </section>
+
+  <section id="research" class="research">
+    <h2>Research</h2>
+    <div class="research-content">
+      <p>Explore my latest research in the fields of high-frequency trading and artificial intelligence.</p>
+      <a href="/Research" class="btn btn-primary">View Research</a>
+    </div>
+  </section>
+
+  <section id="blog" class="blog-preview">
+    <h2>Latest Articles</h2>
+    <div class="post-grid">
+      {% for post in site.posts limit:3 %}
+      <div class="post-card">
+        <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url }}" class="read-more">Continue Reading</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="/blog" class="btn btn-outline">View All Articles</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-content">
+      <p>Interested in collaborating or have questions about my work? Feel free to reach out!</p>
+      <a href="mailto:{{ site.email }}" class="btn btn-primary">Contact Me</a>
+      <div class="social-links">
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</div>

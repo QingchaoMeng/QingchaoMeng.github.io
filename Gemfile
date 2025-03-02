@@ -33,3 +33,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", "~> 1.7"
+```
+1. Add minima to your Gemfile if not already present:
+```ruby
+gem "minima", "~> 2.5"
