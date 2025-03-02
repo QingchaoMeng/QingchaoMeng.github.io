@@ -1,5 +1,3 @@
----
----
 
 @import 
   "minima",
@@ -8,7 +6,9 @@
   "minima/syntax-highlighting"
 ;
 
-
+body {
+  margin: 0; /* Dummy rule, can be anything */
+}
 
 
 // Custom variables
