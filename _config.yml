@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Art of HFT to AI
-email: noeveah@gmail.com
-description: >- 
-  This site is my homepage blog of techs.
-baseurl: ""
-url: "https://qingchaomeng.github.io"
+title: Qingchao Meng
+email: your-email@example.com
+description: >-
+  Quantitative Finance & Machine Learning Professional
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social media profiles
 github_username: QingchaoMeng
@@ -31,22 +31,19 @@ linkedin_username: qingchaomeng
 # twitter_username: your_twitter_username
 
 # Build settings
-markdown: kramdown
 remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-remote-theme
 
-# Add these lines to ensure custom CSS is processed correctly
+# Theme settings
 sass:
   sass_dir: _sass
   style: compressed
-  
-# Additional site config
+
+# Minima settings
 header_pages:
   - about.md
-  - projects.md
   - blog.md
 
 # Exclude from processing
