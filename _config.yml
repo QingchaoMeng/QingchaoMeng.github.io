@@ -31,25 +31,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
 
-# Pagination settings
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-# Sass settings
-sass:
-  style: compressed
-  sass_dir: _sass
-
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-# Exclude files from processing
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
