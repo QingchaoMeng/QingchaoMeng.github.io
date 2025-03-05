@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Welcome to My Blog"
+date: 2022-10-11
+---
+
+Welcome to my personal blog! This is where I'll be sharing my thoughts and experiences in technology, particularly focusing on AI, high-frequency trading, and other interesting tech topics.
+
+Stay tuned for more content coming soon!

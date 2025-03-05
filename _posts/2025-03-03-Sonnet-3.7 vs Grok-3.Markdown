@@ -1,1 +1,7 @@
+---
+layout: post
+title: "Sonnet-3.7 vs Grok-3"
+date: 2025-03-03
+---
+
 Tested Sonnet 3.7 with both Cursor and TRAE. The Cursor agent demonstrated significantly better project understanding and completeness compared to TRAE. Grok-3 exhibited superior knowledge and analytical skills.
