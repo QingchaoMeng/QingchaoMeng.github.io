@@ -10,7 +10,7 @@ layout: default
     <div class="glow glow-2"></div>
   </div>
   <div class="hero-content">
-    <p class="hero-label">Senior ML Engineer · Meta</p>
+    <p class="hero-label">ML Engineer · Meta</p>
     <h1>Qingchao Meng</h1>
     <p class="hero-sub">I build ML systems for ads ranking at Meta and tinker with trading systems, AI agents, and whatever else catches my attention.</p>
     <div class="hero-links">
@@ -62,74 +62,154 @@ layout: default
     <p class="section-sub">Side projects, experiments, and rabbit holes.</p>
     <div class="project-grid">
 
-      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/DailyStockScreener" class="project-card" target="_blank">
+      <div class="project-card">
         <div class="project-top">
           <i class="fas fa-chart-bar project-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
         </div>
         <h3>Daily Stock Screener</h3>
         <p>Flask web app that screens stocks using quantitative filters. Automated data pipelines deployed on GCP.</p>
         <div class="tags"><span>Python</span><span>Flask</span><span>GCP</span></div>
-      </a>
+      </div>
 
-      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/tweetBot" class="project-card" target="_blank">
+      <div class="project-card">
         <div class="project-top">
           <i class="fas fa-share-nodes project-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
         </div>
         <h3>TweetBot</h3>
         <p>Social media bot that aggregates content from RSS, Weibo, and Xiaohongshu, then publishes curated posts.</p>
         <div class="tags"><span>Python</span><span>Docker</span><span>Scraping</span></div>
-      </a>
+      </div>
 
-      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/shoppingWeee" class="project-card" target="_blank">
+      <div class="project-card">
         <div class="project-top">
           <i class="fas fa-cart-shopping project-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
         </div>
         <h3>Weee Shopping Agent</h3>
         <p>AI agent that reads a grocery list, navigates the Weee! website, and adds everything to your cart.</p>
         <div class="tags"><span>AI Agent</span><span>Browser Automation</span></div>
-      </a>
+      </div>
 
-      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/tetris_game" class="project-card" target="_blank">
+      <div class="project-card">
         <div class="project-top">
           <i class="fas fa-gamepad project-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
         </div>
         <h3>Tetris</h3>
         <p>Classic Tetris built with vanilla JS and HTML5 Canvas. Clean, responsive, playable in the browser.</p>
         <div class="tags"><span>JavaScript</span><span>Canvas</span></div>
-      </a>
+      </div>
 
-      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/stormTest" class="project-card" target="_blank">
+      <div class="project-card">
         <div class="project-top">
           <i class="fas fa-bolt project-icon"></i>
-          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
         </div>
         <h3>AI Research Agent</h3>
         <p>Experiments with DeepSeek and Knowledge Storm for automated multi-source research synthesis.</p>
         <div class="tags"><span>LLM</span><span>DeepSeek</span><span>Research</span></div>
-      </a>
+      </div>
 
     </div>
   </div>
 </section>
 
-<!-- Blog -->
-<section id="blog" class="section">
+<!-- AI Radar -->
+<section id="radar" class="section">
   <div class="container">
-    <h2>Writing</h2>
-    <p class="section-sub">Notes, experiments, and the occasional hot take.</p>
-    <div class="blog-list">
-      {%- for post in site.posts limit:10 -%}
-      <a href="{{ post.url | relative_url }}" class="blog-row">
-        <time>{{ post.date | date: "%b %Y" }}</time>
-        <span class="blog-title">{{ post.title | escape }}</span>
-        <i class="fas fa-arrow-right blog-arrow"></i>
-      </a>
-      {%- endfor -%}
+    <h2>AI Radar</h2>
+    <p class="section-sub">Interesting releases I've been following recently.</p>
+
+    <!-- Models -->
+    <div class="radar-category">
+      <h3 class="radar-label"><i class="fas fa-microchip"></i> Models</h3>
+      <div class="radar-grid">
+        <a href="https://github.com/deepseek-ai/DeepSeek-V3" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Open Source</span>
+            <i class="fab fa-github radar-ext"></i>
+          </div>
+          <h4>DeepSeek V3</h4>
+          <p>671B MoE model rivaling GPT-4. Mixture-of-experts with 37B active params per token.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=4k7D2KJZdMQ" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Video</span>
+            <i class="fab fa-youtube radar-ext"></i>
+          </div>
+          <h4>Claude 4 / Opus</h4>
+          <p>Anthropic's most capable model. Extended thinking, agentic coding, and multi-step reasoning.</p>
+        </a>
+        <a href="https://github.com/meta-llama/llama-models" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Open Source</span>
+            <i class="fab fa-github radar-ext"></i>
+          </div>
+          <h4>Llama 4</h4>
+          <p>Meta's open-weight multimodal models. Scout (17B active MoE) and Maverick for varied use cases.</p>
+        </a>
+      </div>
     </div>
+
+    <!-- Agents -->
+    <div class="radar-category">
+      <h3 class="radar-label"><i class="fas fa-robot"></i> Agents</h3>
+      <div class="radar-grid">
+        <a href="https://github.com/browser-use/browser-use" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Open Source</span>
+            <i class="fab fa-github radar-ext"></i>
+          </div>
+          <h4>Browser Use</h4>
+          <p>Make LLMs interact with any website. Vision + HTML extraction for reliable browser automation.</p>
+        </a>
+        <a href="https://github.com/openai/codex" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Open Source</span>
+            <i class="fab fa-github radar-ext"></i>
+          </div>
+          <h4>OpenAI Codex</h4>
+          <p>Cloud-based coding agent that runs in a sandbox. Handles tasks in parallel across your codebase.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=jGBDkMGPA6s" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Video</span>
+            <i class="fab fa-youtube radar-ext"></i>
+          </div>
+          <h4>Manus AI</h4>
+          <p>General-purpose AI agent that plans, executes, and delivers complete results autonomously.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- MCP & Tools -->
+    <div class="radar-category">
+      <h3 class="radar-label"><i class="fas fa-plug"></i> MCP & Tools</h3>
+      <div class="radar-grid">
+        <a href="https://github.com/modelcontextprotocol/servers" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Open Source</span>
+            <i class="fab fa-github radar-ext"></i>
+          </div>
+          <h4>MCP Servers</h4>
+          <p>Official reference implementations for the Model Context Protocol — GitHub, Slack, filesystem, and more.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=kQmXtrmQ5Zg" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Video</span>
+            <i class="fab fa-youtube radar-ext"></i>
+          </div>
+          <h4>What is MCP?</h4>
+          <p>Anthropic's open standard for connecting AI models to tools and data sources. The USB-C for AI.</p>
+        </a>
+        <a href="https://github.com/cursor-ai/cursor" target="_blank" class="radar-card">
+          <div class="radar-card-top">
+            <span class="radar-tag">Tool</span>
+            <i class="fab fa-github radar-ext"></i>
+          </div>
+          <h4>Cursor</h4>
+          <p>AI-native code editor built on VS Code. Agent mode, multi-file edits, and inline chat.</p>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -148,6 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.section, .project-card, .topic-card').forEach(el => obs.observe(el));
+  document.querySelectorAll('.section, .project-card, .topic-card, .radar-card').forEach(el => obs.observe(el));
 });
 </script>
