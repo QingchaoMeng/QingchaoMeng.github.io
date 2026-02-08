@@ -1,15 +1,23 @@
 # Site settings
-title: The Art of HFT to AI
+title: Qingchao Meng
 email: noeveah@gmail.com
 description: >-
-  This site is my homepage blog of techs.
+  Quantitative Finance & AI — Building at the intersection of high-frequency trading and machine learning.
 
 url: "https://qingchaomeng.github.io"
 baseurl: ""
 
+author:
+  name: Qingchao Meng
+  email: noeveah@gmail.com
+
+github_username: QingchaoMeng
+
 markdown: kramdown
+show_excerpts: true
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
