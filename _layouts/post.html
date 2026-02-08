@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post-page">
+  <div class="container-narrow">
+    <header class="post-header">
+      <div class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</div>
+      <h1>{{ page.title | escape }}</h1>
+    </header>
+    <div class="post-body">
+      {{ content }}
+    </div>
+    <footer class="post-footer">
+      <a href="{{ site.baseurl }}/#blog" class="back-link"><i class="fas fa-arrow-left"></i> Back to all posts</a>
+    </footer>
+  </div>
+</article>

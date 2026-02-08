@@ -4,22 +4,21 @@ title: About
 permalink: /about/
 ---
 
-## Hi, I'm Qingchao 👋
+I'm a Machine Learning Engineer at **Meta**, working on ads ranking — building large-scale ML systems that serve billions of ad impressions daily.
 
-I'm a quantitative finance and machine learning professional passionate about building intelligent systems that operate at the intersection of **high-frequency trading** and **artificial intelligence**.
+Outside of work, I spend my time exploring things I find interesting:
 
-### What I Do
+**Algorithmic Trading** — I've traded and built strategies around market microstructure, statistical arbitrage, and low-latency execution. The intersection of math, speed, and markets is where I started.
 
-- **Algorithmic Trading** — Designing and implementing low-latency trading strategies with a focus on market microstructure
-- **Machine Learning** — Applying deep learning, reinforcement learning, and NLP to financial data and beyond
-- **AI Agents** — Building autonomous agents that can reason, plan, and interact with complex environments
-- **Full-Stack Development** — Shipping end-to-end products from data pipelines to web applications
+**AI Agents** — I've been building autonomous agents that can browse the web, shop for groceries, generate research reports, and interact with complex environments. This is where I think things are heading.
 
-### Tech Stack
+**Machine Learning** — From deep learning and NLP to reinforcement learning — I enjoy going deep on both the theory and the engineering side.
 
-`Python` `C++` `TensorFlow` `PyTorch` `Flask` `JavaScript` `Docker` `GCP`
+### Tech
 
-### Let's Connect
+`Python` `C++` `PyTorch` `TensorFlow` `Flask` `JavaScript` `Docker` `GCP`
 
-- <i class="fab fa-github"></i> [GitHub](https://github.com/QingchaoMeng)
-- <i class="fas fa-envelope"></i> [noeveah@gmail.com](mailto:noeveah@gmail.com)
+### Elsewhere
+
+- [GitHub](https://github.com/QingchaoMeng)
+- [noeveah@gmail.com](mailto:noeveah@gmail.com)

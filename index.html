@@ -2,207 +2,152 @@
 layout: default
 ---
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
-    <div class="hero-inner">
-        <div class="hero-text">
-            <p class="hero-greeting">Hi, I'm</p>
-            <h1 class="hero-name">Qingchao Meng</h1>
-            <p class="hero-tagline">Quantitative Finance <span class="accent">&</span> AI</p>
-            <p class="hero-desc">I build intelligent systems at the intersection of high-frequency trading and machine
-                learning.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
-                <a href="https://github.com/QingchaoMeng" class="btn btn-outline" target="_blank"><i
-                        class="fab fa-github"></i> GitHub</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-graphic">
-                <div class="orbit orbit-1"></div>
-                <div class="orbit orbit-2"></div>
-                <div class="orbit orbit-3"></div>
-                <div class="hero-icon"><i class="fas fa-brain"></i></div>
-            </div>
-        </div>
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-label">Senior ML Engineer · Meta</p>
+    <h1>Qingchao Meng</h1>
+    <p class="hero-sub">I build ML systems for ads ranking at Meta and tinker with trading systems, AI agents, and whatever else catches my attention.</p>
+    <div class="hero-links">
+      <a href="https://github.com/QingchaoMeng" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+      <a href="mailto:noeveah@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
     </div>
-    <div class="hero-scroll">
-        <a href="#about"><i class="fas fa-chevron-down"></i></a>
-    </div>
+  </div>
+  <a href="#about" class="scroll-hint"><i class="fas fa-chevron-down"></i></a>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section id="about" class="section">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>I'm a quantitative finance and machine learning professional passionate about building intelligent
-                    systems. My work spans from low-latency algorithmic trading to cutting-edge AI agents that can
-                    reason and interact with complex environments.</p>
-                <p>I'm constantly exploring the latest in AI — from large language models and reinforcement learning to
-                    autonomous agents and computer vision.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>HFT & Trading</h3>
-                    <p>Market microstructure, statistical arbitrage, low-latency execution</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Machine Learning</h3>
-                    <p>Deep learning, NLP, reinforcement learning, time series</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>AI Agents</h3>
-                    <p>Autonomous agents, planning, tool use, multi-modal reasoning</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Engineering</h3>
-                    <p>Python, C++, full-stack web, cloud deployment, Docker</p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-main">
+        <h2>About</h2>
+        <p>By day, I work on <strong>ads ranking</strong> at Meta — large-scale ML systems that serve billions of impressions. Outside of that, I spend my time building things across a few areas I find interesting.</p>
+      </div>
+      <div class="topic-cards">
+        <div class="topic-card">
+          <div class="topic-num">01</div>
+          <h3>Ads Ranking & ML</h3>
+          <p>Large-scale recommendation systems, deep learning models, and real-time prediction serving at Meta scale.</p>
         </div>
+        <div class="topic-card">
+          <div class="topic-num">02</div>
+          <h3>Trading</h3>
+          <p>Algorithmic strategies, market microstructure, statistical arbitrage. Where math meets speed.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">03</div>
+          <h3>AI Agents</h3>
+          <p>Autonomous agents that browse the web, shop for groceries, write research reports, and more.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">04</div>
+          <h3>Machine Learning</h3>
+          <p>Deep learning, NLP, reinforcement learning — both the theory and the engineering.</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section section-alt">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="project-grid">
+<!-- Projects -->
+<section id="projects" class="section section-dark">
+  <div class="container">
+    <h2>Things I've Built</h2>
+    <p class="section-sub">Side projects, experiments, and rabbit holes.</p>
+    <div class="project-grid">
 
-            <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/DailyStockScreener" class="project-card"
-                target="_blank">
-                <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
-                <h3>Daily Stock Screener</h3>
-                <p>A Flask-based web app that screens stocks daily using quantitative filters. Features automated data
-                    pipelines and deployed on Google Cloud.</p>
-                <div class="project-tags">
-                    <span>Python</span><span>Flask</span><span>GCP</span><span>SQLAlchemy</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/tweetBot" class="project-card"
-                target="_blank">
-                <div class="project-icon"><i class="fas fa-share-nodes"></i></div>
-                <h3>TweetBot</h3>
-                <p>An automated social media bot that aggregates content from multiple sources including RSS feeds,
-                    Weibo, and Xiaohongshu, then publishes curated posts.</p>
-                <div class="project-tags">
-                    <span>Python</span><span>Docker</span><span>Web Scraping</span><span>GCP</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/shoppingWeee" class="project-card"
-                target="_blank">
-                <div class="project-icon"><i class="fas fa-cart-shopping"></i></div>
-                <h3>Weee Shopping Agent</h3>
-                <p>An AI-powered shopping agent that automates grocery ordering on Weee! — reads a shopping list and
-                    navigates the site to add items to cart.</p>
-                <div class="project-tags">
-                    <span>Python</span><span>AI Agent</span><span>Browser Automation</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/open_manus" class="project-card"
-                target="_blank">
-                <div class="project-icon"><i class="fas fa-hand"></i></div>
-                <h3>OpenManus</h3>
-                <p>An open-source robotic hand project combining hardware design with AI-driven control software for
-                    dexterous manipulation tasks.</p>
-                <div class="project-tags">
-                    <span>Robotics</span><span>Python</span><span>Hardware</span><span>AI</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/tetris_game" class="project-card"
-                target="_blank">
-                <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                <h3>Tetris Game</h3>
-                <p>A classic Tetris game built with vanilla JavaScript and HTML5 Canvas — clean, responsive, and
-                    playable in the browser.</p>
-                <div class="project-tags">
-                    <span>JavaScript</span><span>HTML5 Canvas</span><span>CSS</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/stormTest" class="project-card"
-                target="_blank">
-                <div class="project-icon"><i class="fas fa-bolt"></i></div>
-                <h3>AI Research Agent</h3>
-                <p>Experiments with DeepSeek and Knowledge Storm for automated research — generates comprehensive
-                    reports using AI-driven multi-source synthesis.</p>
-                <div class="project-tags">
-                    <span>Python</span><span>DeepSeek</span><span>LLM</span><span>Research</span>
-                </div>
-            </a>
-
+      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/DailyStockScreener" class="project-card" target="_blank">
+        <div class="project-top">
+          <i class="fas fa-chart-bar project-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
         </div>
+        <h3>Daily Stock Screener</h3>
+        <p>Flask web app that screens stocks using quantitative filters. Automated data pipelines deployed on GCP.</p>
+        <div class="tags"><span>Python</span><span>Flask</span><span>GCP</span></div>
+      </a>
+
+      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/tweetBot" class="project-card" target="_blank">
+        <div class="project-top">
+          <i class="fas fa-share-nodes project-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
+        </div>
+        <h3>TweetBot</h3>
+        <p>Social media bot that aggregates content from RSS, Weibo, and Xiaohongshu, then publishes curated posts.</p>
+        <div class="tags"><span>Python</span><span>Docker</span><span>Scraping</span></div>
+      </a>
+
+      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/shoppingWeee" class="project-card" target="_blank">
+        <div class="project-top">
+          <i class="fas fa-cart-shopping project-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
+        </div>
+        <h3>Weee Shopping Agent</h3>
+        <p>AI agent that reads a grocery list, navigates the Weee! website, and adds everything to your cart.</p>
+        <div class="tags"><span>AI Agent</span><span>Browser Automation</span></div>
+      </a>
+
+      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/tetris_game" class="project-card" target="_blank">
+        <div class="project-top">
+          <i class="fas fa-gamepad project-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
+        </div>
+        <h3>Tetris</h3>
+        <p>Classic Tetris built with vanilla JS and HTML5 Canvas. Clean, responsive, playable in the browser.</p>
+        <div class="tags"><span>JavaScript</span><span>Canvas</span></div>
+      </a>
+
+      <a href="https://github.com/QingchaoMeng/AI_Playground/tree/main/stormTest" class="project-card" target="_blank">
+        <div class="project-top">
+          <i class="fas fa-bolt project-icon"></i>
+          <i class="fas fa-arrow-up-right-from-square project-ext"></i>
+        </div>
+        <h3>AI Research Agent</h3>
+        <p>Experiments with DeepSeek and Knowledge Storm for automated multi-source research synthesis.</p>
+        <div class="tags"><span>LLM</span><span>DeepSeek</span><span>Research</span></div>
+      </a>
+
     </div>
+  </div>
 </section>
 
-<!-- Blog Section -->
+<!-- Blog -->
 <section id="blog" class="section">
-    <div class="container">
-        <h2 class="section-title">Latest Posts</h2>
-        <div class="blog-grid">
-            {%- for post in site.posts limit:6 -%}
-            <a href="{{ post.url | relative_url }}" class="blog-card">
-                <div class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-                <h3>{{ post.title | escape }}</h3>
-                {%- if post.excerpt -%}
-                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-                {%- endif -%}
-                <span class="blog-read-more">Read more <i class="fas fa-arrow-right"></i></span>
-            </a>
-            {%- endfor -%}
-        </div>
+  <div class="container">
+    <h2>Writing</h2>
+    <p class="section-sub">Notes, experiments, and the occasional hot take.</p>
+    <div class="blog-list">
+      {%- for post in site.posts limit:10 -%}
+      <a href="{{ post.url | relative_url }}" class="blog-row">
+        <time>{{ post.date | date: "%b %Y" }}</time>
+        <span class="blog-title">{{ post.title | escape }}</span>
+        <i class="fas fa-arrow-right blog-arrow"></i>
+      </a>
+      {%- endfor -%}
     </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section section-alt">
-    <div class="container contact-section">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="contact-desc">Interested in collaborating, discussing ideas, or just want to connect? I'd love to hear
-            from you.</p>
-        <div class="contact-links">
-            <a href="https://github.com/QingchaoMeng" target="_blank" class="contact-icon"><i
-                    class="fab fa-github"></i><span>GitHub</span></a>
-            <a href="mailto:noeveah@gmail.com" class="contact-icon"><i
-                    class="fas fa-envelope"></i><span>Email</span></a>
-        </div>
-    </div>
+  </div>
 </section>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Fade-in on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const t = document.querySelector(this.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
+
+  // Fade in on scroll
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.section, .project-card, .topic-card').forEach(el => obs.observe(el));
+});
 </script>
