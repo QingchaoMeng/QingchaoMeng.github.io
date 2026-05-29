@@ -69,58 +69,17 @@ layout: default
         <div class="featured-build">
             <div class="featured-build-copy">
                 <p class="feature-kicker">Current build</p>
-                <h2>DentClarity</h2>
+                <h2>
+                    <a class="section-title-link" href="https://dentclarity.com" target="_blank" rel="noopener">
+                        DentClarity <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </h2>
                 <p class="featured-lede">A privacy-first dental revenue intelligence platform that turns safe claim
-                    exports into prioritized recovery actions: underpayments, write-off drift, appealable denials,
-                    secondary claim misses, documentation gaps, and filing risk.</p>
-                <div class="feature-actions">
-                    <a href="https://dentclarity.com" target="_blank" rel="noopener" class="button-primary">Visit
-                        DentClarity <i class="fas fa-arrow-up-right-from-square"></i></a>
-                    <a href="#projects" class="button-secondary">See related work</a>
-                </div>
-                <div class="metric-strip" aria-label="DentClarity product highlights">
-                    <div class="metric-card">
-                        <strong>No PHI</strong>
-                        <span>needed for the first-look audit</span>
-                    </div>
-                    <div class="metric-card">
-                        <strong>Claim-level</strong>
-                        <span>next actions for billing teams</span>
-                    </div>
-                    <div class="metric-card">
-                        <strong>GCP</strong>
-                        <span>de-identification and audit workflow</span>
-                    </div>
-                </div>
+                    exports into prioritized recovery actions.</p>
             </div>
             <div class="featured-build-visual" aria-label="DentClarity demo preview">
-                <div class="visual-head">
-                    <img src="{{ site.baseurl }}/assets/projects/dentclarity-logo-mark.png" alt="" aria-hidden="true">
-                    <div>
-                        <strong>DentClarity</strong>
-                        <span>revenue-leakage audit</span>
-                    </div>
-                </div>
                 <img class="demo-poster" src="{{ site.baseurl }}/assets/projects/dentclarity-demo-poster.png"
                     alt="DentClarity demo preview showing upload, leakage checks, and an actionable recovery report">
-            </div>
-        </div>
-
-        <div class="workflow-row">
-            <div class="workflow-step">
-                <span>01</span>
-                <h3>Safe intake</h3>
-                <p>Start from de-identified claim, remittance, and documentation exports the office already knows.</p>
-            </div>
-            <div class="workflow-step">
-                <span>02</span>
-                <h3>Audit orchestration</h3>
-                <p>Combine LLM-assisted extraction with deterministic checks for leakage patterns and policy fit.</p>
-            </div>
-            <div class="workflow-step">
-                <span>03</span>
-                <h3>Recovery review</h3>
-                <p>Generate owner-ready reports that rank recoverable dollars, urgency, and the next staff action.</p>
             </div>
         </div>
     </div>
@@ -322,6 +281,6 @@ layout: default
         const obs = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.08 });
-        document.querySelectorAll('.section, .project-card, .topic-card, .radar-card, .metric-card, .workflow-step').forEach(el => obs.observe(el));
+        document.querySelectorAll('.section, .project-card, .topic-card, .radar-card').forEach(el => obs.observe(el));
     });
 </script>
